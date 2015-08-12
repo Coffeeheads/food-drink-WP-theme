@@ -1,6 +1,4 @@
 <?php get_header(); ?>
-<p>making a change here.</p>
-<p>Here is a test change two dsfjhsdlgfjdghfdkghsdk</p>
 
 <div class="main">
   <div class="container">
