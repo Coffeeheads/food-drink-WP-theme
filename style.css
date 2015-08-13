@@ -7,6 +7,50 @@
 * Author URI: http://hackeryou.com
 */
 /*
+*/
+
+/*
+==========HEADER FONT==========
+
+*/
+@font-face {
+    font-family: 'bebas_neue';
+    src: url('../fonts/bebasneue_regular-webfont.eot');
+    src: url('../fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_regular-webfont.woff') format('woff'),
+         url('../fonts/bebasneue_regular-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue_regular-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bebas_neue';
+    src: url('../fonts/bebasneue_bold-webfont.eot');
+    src: url('../fonts/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('../fonts/bebasneue_bold-webfont.woff') format('woff'),
+         url('../fonts/bebasneue_bold-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family:'nevis-Bold';
+    src: url('../fonts/nevis-Bold_gdi.eot');
+    src: url('../fonts/nevis-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/nevis-Bold_gdi.woff') format('woff'),
+        url('../fonts/nevis-Bold_gdi.ttf') format('truetype'),
+        url('../fonts/nevis-Bold_gdi.svg#nevis-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+
+
+/*
+
 =============================================================================
                    Normalize, border box and clearfix
 =============================================================================
@@ -25,7 +69,7 @@ audio:not([controls]) {
   display: none; }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -35,8 +79,7 @@ a:focus {
 a:active, a:hover {
   outline: 0; }
 
-h1 {
-  font-size: 2em; }
+
 
 abbr[title] {
   border-bottom: 1px dotted; }
@@ -425,7 +468,10 @@ img {
   max-width: 100%; }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   color: #333; }
+
+
 
 .container {
   max-width: 1200px;
@@ -438,3 +484,111 @@ body {
 
 .full {
   width: 100%; }
+
+
+  /*FOOTER STYLES*/
+
+  .bottom_bar {
+    background: #23292c;
+    padding-top: 59px;
+    padding-bottom: 47px;
+  }
+
+  .bottom_bar {
+     color:#abb6bc;
+     font-size: 16px;
+  }
+
+  .row {
+    margin:0 auto;
+    width:80%;
+    display: flex;
+  }
+
+  .location_container {
+    height: 500px;
+    position:relative;
+    width:100%;
+  }
+
+  .map_container {
+    height: 500px;
+    width:50%;
+    float:left;
+    background:#bdc3c7;
+  }
+
+  .contact_container {
+    height: 500px;
+    width:50%;
+    float:right;
+    background:white;
+  }
+
+  .footer_widget {
+    width: 38%;
+    margin:auto; }
+  }
+
+  .footer_widget ul {
+    margin: 0;
+    padding: 0; }
+
+  .footer_widget ul li {
+    list-style: none; }
+
+  .contact_wrap {
+  padding:40px 83px 115px;
+  height:500px;
+  background:white; 
+  }
+
+  .contact_wrap ul li {
+    list-style: none;
+    }
+
+  .contact_wrap img {
+    padding:5px;
+  }
+
+
+  .button_wrap{
+    border:2px solid #bd8c60;
+    width: 15em;
+    margin-top: 20px;
+  }
+
+  .button_wrap:hover {
+    background: #bd8c60;
+    color: white;
+  }
+
+  .button_wrap p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+
+  #text-7, .center  {
+    color:#bd8c60;
+    text-transform: uppercase;
+    font-size: 2em; 
+    font-family: 'bebas_neue', sans-serif;
+    line-height: 36px;
+    letter-spacing: 8px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  body.page-id-34 {
+    background:url('http://localhost:8888/food-drink-WP-theme/images/custom-bg13.png');
+    width:100%;
+  }
+
+
+
+
+
+

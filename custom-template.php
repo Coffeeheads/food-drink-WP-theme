@@ -1,7 +1,10 @@
 <?php get_header();  ?>
 
 
+
 <div class="main">
+
+<h1>Custom Page Template</h1>
   <div class="container">
 
     <div class="content">
