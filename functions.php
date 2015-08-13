@@ -153,6 +153,7 @@ add_filter( 'get_the_excerpt', 'hackeryou_custom_excerpt_more' );
  * within hackeryou_widgets_init.
  * Display in your template with dynamic_sidebar()
  */
+
 function hackeryou_widgets_init() {
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
@@ -163,6 +164,47 @@ function hackeryou_widgets_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+
+	// Area 2, located at the footer of all pages.
+	register_sidebar( array(
+		'name' => 'Footer Widget Area',
+		'id' => 'footer-widget-area',
+		'description' => 'The footer widget area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+	) );
+
+	// Area 3, located at the footer of all pages.
+	register_sidebar( array(
+		'name' => 'Map Widget Area',
+		'id' => 'map-widget-area',
+		'description' => 'The map widget area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+	) );
+
+	// Area 4, located at the footer of all pages.
+	register_sidebar( array(
+		'name' => 'Contact Widget Area',
+		'id' => 'contact-widget-area',
+		'description' => 'The contact widget area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Button Widget Area',
+		'id' => 'button-widget-area',
+		'description' => 'The button widget area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
 	) );
 
 }

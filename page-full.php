@@ -12,10 +12,14 @@ get_header();  ?>
     <?php // Start the loop ?>
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-      <h2><?php the_title(); ?></h2>
+	<section id = "about">
+      <div class="center"><?php the_title(); ?></div>
       <?php the_content(); ?>
+	</section>
 
     <?php endwhile; // end the loop?>
+
+
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
