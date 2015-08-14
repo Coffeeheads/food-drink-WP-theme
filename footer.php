@@ -1,13 +1,13 @@
 	<footer>
 	  
-	  <div class="location_container">
+	  <div class="location_container" id="footer">
 		  <div class="map_container"></div>
 		  <div class="contact_container">
 		  	<div class="contact_wrap">
 		  		<ul>
 			  		<?php  dynamic_sidebar( 'contact-widget-area' ); ?>
 			  		<div class = "button_wrap">
-			  			<p><?php  dynamic_sidebar( 'button-widget-area' ); ?></p>
+			  			<p><?php dynamic_sidebar( 'button-widget-area' ); ?></p>
 			  		</div>
 			  	</ul>
 		  	</div>
@@ -20,10 +20,9 @@
 
 	  <div class="bottom_bar">
 	  	   <div class="row">
-			   <p>&copy; <?php echo date('Y'); ?> The Gourmet. All Rights Reserved. </p>
 			   <div class="footer_widget">
 					<ul class="xoxo">
-				   		<?php  dynamic_sidebar( 'footer-widget-area' ); ?>
+				   		<?php dynamic_sidebar( 'footer-widget-area' ); ?>
 				   	</ul>
 				</div>
 		   </div>

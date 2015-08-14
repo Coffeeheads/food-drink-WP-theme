@@ -10,27 +10,13 @@
 
   <?php // Load our CSS ?>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,300,400,600' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<!--   <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  
 
   <?php wp_head(); ?>
 </head>
 
 
 <body <?php body_class(); ?>>
-
-<header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_locations' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
-</header><!--/.header-->
 

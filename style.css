@@ -15,33 +15,33 @@
 */
 @font-face {
     font-family: 'bebas_neue';
-    src: url('../fonts/bebasneue_regular-webfont.eot');
-    src: url('../fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
-         url('../fonts/bebasneue_regular-webfont.woff') format('woff'),
-         url('../fonts/bebasneue_regular-webfont.ttf') format('truetype'),
-         url('../fonts/bebasneue_regular-webfont.svg#bebas_neueregular') format('svg');
+    src: url('fonts/bebasneue_regular-webfont.eot');
+    src: url('fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue_regular-webfont.woff') format('woff'),
+         url('fonts/bebasneue_regular-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue_regular-webfont.svg#bebas_neueregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'bebas_neue';
-    src: url('../fonts/bebasneue_bold-webfont.eot');
-    src: url('../fonts/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bebasneue_bold-webfont.woff2') format('woff2'),
-         url('../fonts/bebasneue_bold-webfont.woff') format('woff'),
-         url('../fonts/bebasneue_bold-webfont.ttf') format('truetype'),
-         url('../fonts/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
+    src: url('fonts/bebasneue_bold-webfont.eot');
+    src: url('fonts/bebasneue_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue_bold-webfont.woff') format('woff'),
+         url('fonts/bebasneue_bold-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue_bold-webfont.svg#bebas_neuebold') format('svg');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family:'nevis-Bold';
-    src: url('../fonts/nevis-Bold_gdi.eot');
-    src: url('../fonts/nevis-Bold_gdi.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/nevis-Bold_gdi.woff') format('woff'),
-        url('../fonts/nevis-Bold_gdi.ttf') format('truetype'),
-        url('../fonts/nevis-Bold_gdi.svg#nevis-Bold') format('svg');
+    src: url('fonts/nevis-Bold_gdi.eot');
+    src: url('fonts/nevis-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('fonts/nevis-Bold_gdi.woff') format('woff'),
+        url('fonts/nevis-Bold_gdi.ttf') format('truetype'),
+        url('fonts/nevis-Bold_gdi.svg#nevis-Bold') format('svg');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -258,7 +258,7 @@ img.alignright {
   clear: both; }
 
 ul.menu {
-  margin: 0;
+  margin: 2rem 0;
   padding: 0; }
   ul.menu li {
     display: inline;
@@ -266,8 +266,15 @@ ul.menu {
     ul.menu li a {
       color: #333;
       padding: 10px;
-      background: #333;
-      color: white; }
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: 'bebas_neue', sans-serif;
+/*      background: #333;*/
+/*      color: white;*/ }
+      ul.menu li a:hover {
+        color: #bd8c60; 
+        border-bottom: 2px solid #bd8c60;}
 
 .sidebar {
   width: 30%;
@@ -469,12 +476,12 @@ img {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #333; }
-
-
+  color: #333; 
+  font-size:16px;
+}
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto; }
 
 .content {
@@ -486,76 +493,88 @@ body {
   width: 100%; }
 
 
+
+
+  /*HEADER STYLES*/
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-family: 'bebas_neue', sans-serif;
+  }
+    h1 a {
+      color: #333;
+      font-size: 2.5rem;
+      letter-spacing: 0.4rem;
+    }
+      h1 a:hover {
+      color: #bd8c60;
+
+    }
+
+
+
   /*FOOTER STYLES*/
 
   .bottom_bar {
     background: #23292c;
-    padding-top: 59px;
-    padding-bottom: 47px;
-  }
-
-  .bottom_bar {
-     color:#abb6bc;
-     font-size: 16px;
+    padding: 3em 0;
+    color:#abb6bc;
+    font-size: 1em;
   }
 
   .row {
     margin:0 auto;
     width:80%;
-    display: flex;
   }
 
   .location_container {
-    height: 500px;
-    position:relative;
+    height:40em;
     width:100%;
   }
 
   .map_container {
-    height: 500px;
+    height:40em;
     width:50%;
     float:left;
     background:#bdc3c7;
   }
 
   .contact_container {
-    height: 500px;
     width:50%;
     float:right;
     background:white;
   }
 
   .footer_widget {
-    width: 38%;
-    margin:auto; }
+    text-align:center;
   }
 
   .footer_widget ul {
     margin: 0;
-    padding: 0; }
+    padding: 0; 
+  }
 
   .footer_widget ul li {
-    list-style: none; }
+    list-style: none; 
+  }
 
   .contact_wrap {
-  padding:40px 83px 115px;
-  height:500px;
   background:white; 
+  padding: 4em 3.2em 3.5em;
   }
 
   .contact_wrap ul li {
     list-style: none;
-    }
-
-  .contact_wrap img {
-    padding:5px;
   }
-
 
   .button_wrap{
     border:2px solid #bd8c60;
-    width: 15em;
-    margin-top: 20px;
+    width: 16em;
+    margin-top:2.5em;
   }
 
   .button_wrap:hover {
@@ -563,32 +582,43 @@ body {
     color: white;
   }
 
-  .button_wrap p {
+  #text-3 {
     font-size: 1em;
     text-align: center;
+    text-transform: uppercase;
+    font-weight:700;
   }
 
+  #text-4 {
+    text-transform: uppercase;
+    font-family: 'Palatino Linotype', sans-serif;
+    font-size: 1.3em;
+  }
 
   #text-7, .center  {
     color:#bd8c60;
     text-transform: uppercase;
-    font-size: 2em; 
+    font-size: 3.5em; 
     font-family: 'bebas_neue', sans-serif;
     line-height: 36px;
     letter-spacing: 8px;
+    font-weight:700;
+    margin-bottom: 1em;
   }
 
   .center {
     text-align: center;
-  }
-
-  body.page-id-34 {
-    background:url('http://localhost:8888/food-drink-WP-theme/images/custom-bg13.png');
-    width:100%;
-  }
+}
 
 
+  #who-we-are, #services {
+  padding: 3.5em 9em;
+  text-align:center;
+  height:800px;
+}
 
-
-
-
+  #who-we-are p, #services p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+}
