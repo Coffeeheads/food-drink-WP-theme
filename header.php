@@ -10,6 +10,7 @@
 
   <?php // Load our CSS ?>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,300,400,600' rel='stylesheet' type='text/css'>
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <!--   <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   

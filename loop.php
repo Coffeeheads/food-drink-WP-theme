@@ -12,40 +12,47 @@
 
 <?php endif; // end if there are no posts ?>
 
+
 <?php // if there are posts, Start the Loop. ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h2 class="entry-title">
-        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-          <?php the_title(); ?>
-        </a>
-      </h2>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<section class="entry-content">
-				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
-				<?php wp_link_pages( array(
-          'before' => '<div class="page-link"> Pages:',
-          'after' => '</div>'
-        )); ?>
-			</section><!-- .entry-content -->
+		<div class="post_wrap">
+			
+			<div class="entry-date">
+				<p class = "date"><?php the_date("F j, o"); ?> by <?php the_author_posts_link(); ?>, 
+				<?php comments_popup_link('Respond to this post &raquo;', '1 Response', 
+				'% Responses'); ?></p>
+			</div>
+	
+			<div class="post_content">
+					<h2 class="entry-title">
+	        			<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark"><?php the_title(); ?>
+	        			</a>
+	      			</h2>
 
-			<footer>
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?></p>
-        <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
-        <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
-			</footer>
+					<div class="entry-content">
+						<?php the_post_thumbnail('big'); ?>
+						<p><?php the_content('Continue Reading <span class="meta-nav">&hellip;</span>'); ?></p>
+						<?php wp_link_pages( array(
+		          		'before' => '<div class="page-link"> Pages:',
+		          		'after' => '</div>'
+		        			)); ?>
+					</div><!-- .entry-content -->
 
-		</article><!-- #post-## -->
+			</div><!-- post_content -->
+		</div><!-- post_wrap -->
 
-		<?php comments_template( '', true ); ?>
+	</article><!-- #post-## -->
 
+	<?php comments_template( '', true ); ?>
 
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-  <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
-  <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
+  <p class="alignleft"><?php next_posts_link('&laquo; Older Posts'); ?></p>
+  <p class="alignright"><?php previous_posts_link('Newer Posts &raquo;'); ?></p>
 <?php endif; ?>

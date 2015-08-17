@@ -13,11 +13,15 @@ get_header();  ?>
         <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
-
+    <nav>
+    <span class="fa fa-bars fa-2x" title="menu"></span>
+    <ul class="dropdown">
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_locations' => 'primary'
     )); ?>
+    </ul>
+    </nav>
   </div> <!-- /.container -->
 </header><!--/.header-->
 
@@ -32,7 +36,8 @@ get_header();  ?>
     array(
       'posts_per_page' => -1,
       'post_type' => 'page',
-      'order' => 'ASC'
+      'order' => 'ASC',
+      'post_parent' => 21
       )
   ); ?>
 
@@ -41,8 +46,10 @@ get_header();  ?>
     <?php while ($onePageQuery->have_posts()) : $onePageQuery->the_post(); ?>
     
       <section id="<?php echo $post->post_name; ?>">
+        <div class="page-content">
         <div class="center"><?php the_title(); ?></div>
         <p><?php the_content(); ?></p>
+        </div>
       </section>
 
     <?php endwhile; ?>
