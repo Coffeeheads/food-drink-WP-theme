@@ -1,20 +1,22 @@
 	<footer>
 	  
 	  <div class="location_container" id="footer">
-		  <div class="map_container"></div>
-		  <div class="contact_container">
+	  	  <div class="contact_container">
 		  	<div class="contact_wrap">
 		  		<ul>
-			  		<?php  dynamic_sidebar( 'contact-widget-area' ); ?>
-			  		<div class = "button_wrap">
+			  		<div>
+			  			<?php  dynamic_sidebar( 'contact-widget-area' ); ?>
+			  		</div>
+			  		<a href="mailto:support@company.com"><div class = "button_wrap">
 			  			<p><?php dynamic_sidebar( 'button-widget-area' ); ?></p>
 			  		</div>
+			  		</a>
 			  	</ul>
 		  	</div>
-			  		
-			  	
 		  </div>
+		  <div class="map_container">
 
+		  		<?php dynamic_sidebar( 'map-widget-area'); ?>
 		  </div>
 	  </div>
 
@@ -22,7 +24,9 @@
 	  	   <div class="row">
 			   <div class="footer_widget">
 					<ul class="xoxo">
+						<li>
 				   		<?php dynamic_sidebar( 'footer-widget-area' ); ?>
+				   		</li>
 				   	</ul>
 				</div>
 		   </div>
@@ -46,4 +50,14 @@
 
 	<?php wp_footer(); ?>
 </body>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".fa-bars").on("click", function(){
+					$(".dropdown").toggleClass("open");
+				});
+			});
+		</script>
+
 </html>

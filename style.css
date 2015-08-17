@@ -81,6 +81,8 @@ a:active, a:hover {
 
 
 
+
+
 abbr[title] {
   border-bottom: 1px dotted; }
 
@@ -187,10 +189,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clear: both; }
 
 a {
-  color: #BA209B;
+  color: #bc8b5f;
   text-decoration: none; }
   a:hover {
-    color: #D424B1; }
+    color: #bc8b5f; }
 
 /* paragraphs */
 p {
@@ -516,7 +518,6 @@ body {
     }
 
 
-
   /*FOOTER STYLES*/
 
   .bottom_bar {
@@ -526,63 +527,86 @@ body {
     font-size: 1em;
   }
 
-  .row {
+/*  .row {
     margin:0 auto;
     width:80%;
-  }
+  }*/
 
   .location_container {
-    height:40em;
+/*    height:40em;*/
     width:100%;
+    position: relative;
   }
 
   .map_container {
     height:40em;
     width:50%;
-    float:left;
+    float:right;
     background:#bdc3c7;
+  }  
+  .map_container{
+    list-style: none;
   }
 
   .contact_container {
     width:50%;
+    height: 40em;
     float:right;
     background:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .footer_widget {
     text-align:center;
+    background: #23292c;
+        padding: 3em 0;
+    float: right;
+    width: 100%;
   }
 
   .footer_widget ul {
     margin: 0;
-    padding: 0; 
+  }
+  .xoxo {
+    padding: 0;
   }
 
   .footer_widget ul li {
-    list-style: none; 
+    list-style: none;
   }
 
   .contact_wrap {
-  background:white; 
-  padding: 4em 3.2em 3.5em;
+    background:white; 
+    padding: 0 2em;
   }
 
+ 
   .contact_wrap ul li {
     list-style: none;
   }
 
-  .button_wrap{
+  .load_button ul {
+    list-style:none;
+  }
+
+  .button_wrap, .load_button {
     border:2px solid #bd8c60;
     width: 16em;
     margin-top:2.5em;
   }
 
-  .button_wrap:hover {
+  .button_wrap:hover, .load_button:hover {
     background: #bd8c60;
     color: white;
   }
 
-  #text-3 {
+  .button_wrap a {
+    color: #000;
+  }
+
+  #text-3, #text-9 {
     font-size: 1em;
     text-align: center;
     text-transform: uppercase;
@@ -606,19 +630,245 @@ body {
     margin-bottom: 1em;
   }
 
+
+  .page-content {
+/*    border: 1px solid green;*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+  }
   .center {
-    text-align: center;
+/*  border: 1px solid red;*/
+  margin: 0.5em 0;
+  text-align: center;
 }
 
-
-  #who-we-are, #services {
-  padding: 3.5em 9em;
+section{
+  height: 100vh;
+  padding: 0 9em;
   text-align:center;
-  height:800px;
+  min-height: 600px;
 }
-
-  #who-we-are p, #services p {
+section p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   font-weight: 300;
+  margin: 0.5em 0;
+/*  border:1px solid red;*/
+}
+section img {
+  margin: 0 1em;
+}
+/*#menu .page-content {
+  border: none;
+}*/
+nav .fa-bars {
+  display: none;
+}
+
+/*POST STYLES*/
+
+.banner_logo {
+  position: relative;
+}
+
+.banner_logo img:last-of-type {
+  position: absolute;
+  top: 100px;
+  width: 50%;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+}
+
+.post_content {
+    border-bottom: 5px solid #e9eced;
+    padding-bottom:36px;
+  }
+
+.post_wrap {
+    margin-top:4em;
+  }
+
+.content_blog {
+  width: 65%;
+  margin: 0 auto; }
+}
+
+article .entry-date p {
+  text-align: center;
+}
+
+.entry-title {
+  text-align: center;
+}
+
+.entry-title a, h1.entry-title {
+  font-family: 'bebas_neue', sans-serif;
+  font-size: 36px;
+  letter-spacing:6px;
+  color:#23323a;
+}
+
+.entry-title a:hover {
+  color:#bd8c60;
+}
+
+p.date {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 40px;
+  margin-top:20px;
+  color: #bdc3c7;
+}
+
+.load_button {
+  margin:60px auto;
+}
+
+.entry-content p a {
+  font-style: italic;
+  font-size: 14px;
+}
+/*SINGLE POST STYLES*/
+
+.single-post .entry-content {
+  border-bottom: 5px solid #e9eced;
+  padding-bottom: 50px;
+}
+
+.single-post .author_box img {
+  border-radius: 50%;
+  margin: 12px 30px 0 0;
+  float:left;
+}
+
+#menu-social-share-menu li a {
+  font-size: 10px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-indent: -9999px;
+  margin-left: 15px;
+}
+
+#menu-social-share-menu li a:hover {
+  border-bottom: none;
+}
+
+#menu-social-share-menu li a[href*="facebook"] {
+    background-image: url('http://localhost/food-drink-WP-theme/wp-content/uploads/2015/08/facebook.png');
+    background-size: cover;
+}
+#menu-social-share-menu li a[href*="twitter"] {
+    background-image: url('http://localhost/food-drink-WP-theme/wp-content/uploads/2015/08/twitter.png');
+    background-size: cover;
+}
+#menu-social-share-menu li a[href*="instagram"] {
+    background-image: url('http://localhost/food-drink-WP-theme/wp-content/uploads/2015/08/instagram.png');
+    background-size: cover;
+}
+#menu-social-share-menu li a[href*="mailto"] {
+    background-image: url('http://localhost/food-drink-WP-theme/wp-content/uploads/2015/08/mailto.png');
+    background-size: cover;
+}
+
+.single-post ul.menu {
+  text-align: center;
+}
+
+.single-post p.comment_author {
+    font-family: 'bebas_neue', sans-serif;
+    font-size:30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.comments-area h2 {
+  border-top:5px solid #e9eced;
+  margin-top: 40px;
+  padding-top: 40px;
+  font-family: 'bebas_neue', sans-serif;
+  font-size: 36px;
+  letter-spacing:6px;
+  color:#23323a;
+  text-align: center;
+}
+
+/* 
+MEDIA QUERIES
+------------------------*/
+
+@media screen and (max-width: 1250px) {
+  section img {
+    margin: 0 0.5em;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  section img {
+    margin: 0 0.25em;
+  }
+  .map_container, .contact_container {
+    width: 100%;
+  }
+  .contact_wrap div {
+    text-align: center;
+  }
+  .button_wrap, .load_button{
+    margin: 2.5em auto;
+  }
+  nav {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    height: 50%;
+    width: 50%;
+  }
+  nav .fa-bars {
+    display: block;
+    text-align: right;
+    padding: 0.75em;
+    color: #333;
+    cursor: pointer;
+  }
+  nav ul.dropdown {
+    display: none;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+   }
+
+  nav ul.dropdown li {
+    display: block;
+    border-top: 1px solid white;
+    padding: 0.5em;
+    margin: 0 3em 0 0;
+  }
+  nav ul.dropdown a {
+    display: block;
+    color: #fff;
+    padding-left: 0.5em;
+    font-size: 1.75rem;
+    width: 100%;
+  }
+  nav ul.dropdown.open {
+    display: block;
+    padding: none;
+        background-color: rgba(0,0,0,0.9);
+  }
+    nav ul.dropdown a:hover, nav ul.dropdown li:hover {
+    color: #333;
+    background-color: #fff;
+    border: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  section, header, footer {
+    width: 750px;
+  }
 }

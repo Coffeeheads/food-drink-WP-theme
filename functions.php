@@ -13,8 +13,7 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
-	
-
+	add_image_size('big', 971, 499, true);
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -22,8 +21,10 @@ function theme_setup() {
 	/* This theme uses wp_nav_menu() in one location.
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
+
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'social' => 'Social Share Menu'
 	) );
 
 	/*
@@ -202,6 +203,16 @@ function hackeryou_widgets_init() {
 		'name' => 'Button Widget Area',
 		'id' => 'button-widget-area',
 		'description' => 'The button widget area',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Load_button Widget Area',
+		'id' => 'Load_button-widget-area',
+		'description' => 'The load_button widget area',
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
